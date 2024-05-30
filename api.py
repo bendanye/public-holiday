@@ -5,17 +5,7 @@ import datetime
 import json
 
 from dataclasses import asdict
-from dataclasses import dataclass
-
-
-@dataclass(frozen=True)
-class PublicHoliday:
-    name: str
-    date: str
-    day: str
-
-    def is_sunday(self):
-        return "Sunday" == self.day
+from public_holiday import PublicHoliday
 
 
 def get_singapore_public_holiday(year: int) -> List[PublicHoliday]:
