@@ -1,4 +1,5 @@
 import json
+import sys
 
 from datetime import date
 from typing import List
@@ -6,11 +7,13 @@ from typing import List
 from public_holiday import PublicHoliday
 
 
-def list_this_year_public_holiday(country: str, specified_date) -> None:
+def list_this_year_public_holiday(
+    country: str, specified_date, displaycount: int = 20
+) -> None:
     year = specified_date.year
     public_holidays = _load(year, country)
-    for public_holiday in _get_after_specified_date(public_holidays, specified_date):
-        print(public_holiday)
+    filtered_holidays = _get_after_specified_date(public_holidays, specified_date)
+    _display(filtered_holidays, displaycount)
 
 
 def _load(year: int, country: str) -> List[PublicHoliday]:
@@ -20,6 +23,16 @@ def _load(year: int, country: str) -> List[PublicHoliday]:
             PublicHoliday(name=record["name"], date=record["date"], day=record["day"])
             for record in records
         ]
+
+
+def _display(public_holidays: List[PublicHoliday], display_count: int):
+    current_count = 0
+    for public_holiday in public_holidays:
+        if current_count >= display_count:
+            break
+
+        print(public_holiday)
+        current_count += 1
 
 
 def _get_after_specified_date(
@@ -33,4 +46,8 @@ def _get_after_specified_date(
 
 
 if __name__ == "__main__":
-    list_this_year_public_holiday("singapore", date.today())
+    display_count = 20
+    if len(sys.argv) == 2:
+        display_count = int(sys.argv[1])
+
+    list_this_year_public_holiday("singapore", date.today(), display_count)
