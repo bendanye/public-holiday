@@ -21,3 +21,8 @@ class PublicHoliday:
 
     def __str__(self) -> str:
         return f"{self.name} - {self.date} ({self.day})"
+
+    @staticmethod
+    def dict_factory(x):
+        exclude_fields = ["date_obj"]
+        return {k: v for (k, v) in x if ((v is not None) and (k not in exclude_fields))}
