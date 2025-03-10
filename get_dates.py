@@ -1,10 +1,13 @@
 import json
 import sys
+import os
 
 from datetime import date
 from typing import List
 
 from public_holiday import PublicHoliday
+
+SCRIPT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
 def list_this_year_public_holiday(
@@ -17,7 +20,7 @@ def list_this_year_public_holiday(
 
 
 def _load(year: int, country: str) -> List[PublicHoliday]:
-    with open(f"data/{year}/{year}_{country}_ph.json", "r") as f:
+    with open(f"{SCRIPT_DIR}/data/{year}/{year}_{country}_ph.json", "r") as f:
         records = json.load(f)
         return [
             PublicHoliday(name=record["name"], date=record["date"], day=record["day"])
