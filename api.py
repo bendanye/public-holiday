@@ -43,7 +43,7 @@ def save_as_json(year: int, country: str, records: List[PublicHoliday]) -> None:
 
 
 if __name__ == "__main__":
-    year = 2025
-    resource_id = "d_3751791452397f1b1c80c451447e40b7"
+    year = 2026
+    resource_id = "d_149b61ad0a22f61c09dc80f2df5bbec8"
     singapore_ph_records = get_singapore_public_holiday(year, resource_id)
     save_as_json(year, "singapore", singapore_ph_records)

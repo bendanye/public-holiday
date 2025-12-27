@@ -1,0 +1,72 @@
+[
+    {
+        "name": "New Year\u2019s Day",
+        "date": "2026-01-01",
+        "day": "Thursday"
+    },
+    {
+        "name": "Chinese New Year",
+        "date": "2026-02-17",
+        "day": "Tuesday"
+    },
+    {
+        "name": "Chinese New Year",
+        "date": "2026-02-18",
+        "day": "Wednesday"
+    },
+    {
+        "name": "Hari Raya Puasa",
+        "date": "2026-03-21",
+        "day": "Saturday"
+    },
+    {
+        "name": "Good Friday",
+        "date": "2026-04-03",
+        "day": "Friday"
+    },
+    {
+        "name": "Labour Day",
+        "date": "2026-05-01",
+        "day": "Friday"
+    },
+    {
+        "name": "Hari Raya Haji",
+        "date": "2026-05-27",
+        "day": "Wednesday"
+    },
+    {
+        "name": "Vesak Day",
+        "date": "2026-05-31",
+        "day": "Sunday"
+    },
+    {
+        "name": "Vesak Day",
+        "date": "2026-06-01",
+        "day": "Monday"
+    },
+    {
+        "name": "National Day",
+        "date": "2026-08-09",
+        "day": "Sunday"
+    },
+    {
+        "name": "National Day",
+        "date": "2026-08-10",
+        "day": "Monday"
+    },
+    {
+        "name": "Deepavali",
+        "date": "2026-11-08",
+        "day": "Sunday"
+    },
+    {
+        "name": "Deepavali",
+        "date": "2026-11-09",
+        "day": "Monday"
+    },
+    {
+        "name": "Christmas Day",
+        "date": "2026-12-25",
+        "day": "Friday"
+    }
+]
